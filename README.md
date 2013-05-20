@@ -30,8 +30,10 @@ Just use `git` to clone the ssh version:
 
 	https://github.com/jasdeepkhalsa/gruntjs-skeleton/archive/master.zip
 
+_Now you should have a folder called "gruntjs-skeleton" accessible from http://localhost/gruntjs-skeleton/_
+
 ## Setup ##
-_Make sure you are in the root of your application for all the following steps, using 'cd' to navigate on the command line_
+_Make sure you are in the root of your application for all the following steps, using 'cd' to navigate on the command line to your "gruntjs-skeleton" folder_
 
 ### 1. Uninstall any previous versions of Grunt.js ###
 
