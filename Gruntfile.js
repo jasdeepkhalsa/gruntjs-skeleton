@@ -1,6 +1,5 @@
 module.exports = function(grunt) {
 
-	// Project configuration.
 	grunt.initConfig({
 		pkg : grunt.file.readJSON('package.json'),
 		jshint : {
@@ -34,10 +33,16 @@ module.exports = function(grunt) {
 				dest : 'js/concat.js'
 			}
 		},
-		min : {
-			dist : {
-				src : ['js/concat.js'],
-				dest : 'js/main.min.js'
+		uglify : {
+			options : {
+				mangle : {
+					except : ['jQuery']
+				}
+			},
+			my_target : {
+				files : {
+					'js/main.min.js' : ['js/concat.js']
+				}
 			}
 		},
 		mincss : {
@@ -49,14 +54,14 @@ module.exports = function(grunt) {
 		}
 	});
 
-	// Default task.
 	grunt.loadNpmTasks('grunt-contrib-jshint');
-	grunt.loadNpmTasks('grunt-contrib-mincss');
 	grunt.loadNpmTasks('grunt-contrib-qunit');
-	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-contrib-concat');
+	grunt.loadNpmTasks('grunt-contrib-uglify');
+	grunt.loadNpmTasks('grunt-contrib-mincss');
+	grunt.loadNpmTasks('grunt-contrib-watch');
 
 	grunt.registerTask('test', ['jshint', 'qunit']);
-	grunt.registerTask('default', ['jshint', 'concat', 'mincss']);
+	grunt.registerTask('default', ['jshint', 'concat', 'uglify', 'mincss']);
 
-}; 
+};
