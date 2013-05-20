@@ -16,7 +16,7 @@ This repository includes:
 4. You will need to have node.js installed: http://nodejs.org/
 
 ## Installation ##
-_Do the following installation _
+_Do the following installation in the folder accessible by your local webserver at http://localhost/_
 
 Just use `git` to clone the ssh version:
 
