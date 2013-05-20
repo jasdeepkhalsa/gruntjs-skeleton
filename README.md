@@ -74,7 +74,7 @@ The result should be something like:
 Please note a few things:
 * `jshint` can cause a lot of issues, I would recommend using it only on JavaScript files you yourself have created and want to test. In which case you can update the jshint `files:` array.
 * `uglify` has a lot of options so please check the full list here: https://github.com/gruntjs/grunt-contrib-uglify
-* `qunit` requires some setup so you can remove it for now if you're not interested in unit testing. If you are, read more documentation here: https://npmjs.org/package/grunt-contrib-qunit. And you will probably want to add the qunit task back into default as follows: `grunt.registerTask('default', ['jshint', 'qunit', 'concat', 'mincss']);`
+* `qunit` requires some setup so you can remove it for now if you're not interested in unit testing. If you are, read more documentation here: https://npmjs.org/package/grunt-contrib-qunit. And you will probably want to add the qunit task back into default as follows: `grunt.registerTask('default', ['jshint', 'qunit', 'concat', 'uglify', 'mincss']);`
 * Full documentation is available on the Grunt website here: http://gruntjs.com/getting-started
 * Detailed information on upgrading from Grunt 0.3.x to Grunt 0.4.x is available here: http://gruntjs.com/upgrading-from-0.3-to-0.4
 
