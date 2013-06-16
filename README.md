@@ -26,7 +26,7 @@ Just use `git` to clone the ssh version:
 
 	git clone https://github.com/jasdeepkhalsa/gruntjs-skeleton.git
 
-**Or** download the .zip archive:
+**Or** download the .zip archive and unzip it to the folder `gruntjs-skeleton`:
 
 	https://github.com/jasdeepkhalsa/gruntjs-skeleton/archive/master.zip
 
@@ -55,36 +55,36 @@ Now you can run grunt with the following command in the root of your application
 
 The result should be something like:
 
-	Running "jshint:files" (jshint) task
-	>> 2 files lint free.
-	
-	Running "concat:dist" (concat) task
-	File "js/concat.js" created.
-	
-	Running "uglify:my_target" (uglify) task
-	File "js/main.min.js" created.
-	
-	Running "mincss:compress" (mincss) task
-	File css/main.min.css created.
-	Uncompressed size: 1092 bytes.
-	Compressed size: 233 bytes gzipped (773 bytes minified).
-	
-	Done, without errors.
+    Running "jshint:files" (jshint) task
+    >> 2 files lint free.
+
+    Running "concat:dist" (concat) task
+    File "js/concat.js" created.
+
+    Running "uglify:my_target" (uglify) task
+    File "js/main.min.js" created.
+
+    Running "cssmin:compress" (cssmin) task
+    File css/main.min.css created.
+    Uncompressed size: 1092 bytes.
+    Compressed size: 233 bytes gzipped (773 bytes minified).
+
+    Done, without errors.
 
 Please note a few things:
 * `jshint` can cause a lot of issues, I would recommend using it only on JavaScript files you yourself have created and want to test. In which case you can update the jshint `files:` array.
 * `uglify` has a lot of options so please check the full list here: https://github.com/gruntjs/grunt-contrib-uglify
-* `qunit` requires some setup so you can remove it for now if you're not interested in unit testing. If you are, read more documentation here: https://npmjs.org/package/grunt-contrib-qunit. And you will probably want to add the qunit task back into default as follows: `grunt.registerTask('default', ['jshint', 'qunit', 'concat', 'uglify', 'mincss']);`
+* `qunit` requires some setup so you can remove it for now if you're not interested in unit testing. If you are, read more documentation here: https://npmjs.org/package/grunt-contrib-qunit. And you will probably want to add the qunit task back into default as follows: `grunt.registerTask('default', ['jshint', 'qunit', 'concat', 'uglify', 'cssmin']);`
 * Full documentation is available on the Grunt website here: http://gruntjs.com/getting-started
 * Detailed information on upgrading from Grunt 0.3.x to Grunt 0.4.x is available here: http://gruntjs.com/upgrading-from-0.3-to-0.4
 
 ## Change logs ##
-* 0.0.3 - Fixed bug of CSS minification not working for multiple CSS files and throwing error "Warning: Object #<Object> has no method 'expandFiles'". Updated CSS plugin to from mincss to cssmin and to version 0.4.0.
+* 0.0.3 - Fixed bug of CSS minification not working for multiple CSS files and throwing error "Warning: Object #<Object> has no method 'expandFiles'". Updated CSS plugin from mincss to cssmin and to version 0.4.0.
 * 0.0.2 - Fixed bug of no minification of JavaScript files. Now using Uglify plugin for minification. Added css reset by Eric Meyer so that Grunt minifies the css rather than throwing errors. Updated documentation.
 * 0.0.1 - Initial commit
 
 ## Author & Version ##
-v0.0.2 by Jasdeep Khalsa
+v0.0.3 by Jasdeep Khalsa
 
 ## Contact ##
 * Email: jasdeep {at} simplyspiritdesign {dot} com
