@@ -93,17 +93,17 @@ Please note a few things:
 
 ## Change logs ##
 * 0.0.5
-- Upgraded libraries to:
-	* Grunt.js v0.4.4
-	* jQuery v1.11.1
-	* QUnit v1.14.0
-- Upgraded Grunt.js plugins to:
-    * grunt-contrib-cssmin: 0.9.0
-    * grunt-contrib-jshint: 0.10.0
-    * grunt-contrib-watch: 0.6.1
-    * grunt-contrib-qunit: 0.4.0
-    * grunt-contrib-uglify: 0.4.0
-- TODO: Look into Bower for package management
+	- Upgraded libraries to:
+		* Grunt.js v0.4.4
+		* jQuery v1.11.1
+		* QUnit v1.14.0
+	- Upgraded Grunt.js plugins to:
+		* grunt-contrib-cssmin: 0.9.0
+		* grunt-contrib-jshint: 0.10.0
+		* grunt-contrib-watch: 0.6.1
+		* grunt-contrib-qunit: 0.4.0
+		* grunt-contrib-uglify: 0.4.0
+	- TODO: Look into Bower for package management
 * 0.0.4 - Removed concat plugin and used uglify's built-in concat functionality instead. Added JavaScript sourcemap support and an index.html file based on HTML5 Boilerplate for testing JavaScript/jQuery. Upgraded to the latest jQuery v1.10.2 & QUnit v1.12.0 libraries.
 * 0.0.3 - Fixed bug of CSS minification not working for multiple CSS files and throwing error "Warning: Object #<Object> has no method 'expandFiles'". Updated CSS plugin from mincss to cssmin and to version 0.4.0.
 * 0.0.2 - Fixed bug of no minification of JavaScript files. Now using Uglify plugin for minification. Added css reset by Eric Meyer so that Grunt minifies the css rather than throwing errors. Updated documentation.
