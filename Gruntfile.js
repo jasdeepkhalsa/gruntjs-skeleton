@@ -38,7 +38,7 @@ module.exports = function(grunt) {
 					sourceMap: 'js/main.min.map'
 				},
 				files : {
-					'js/main.min.js' : ['js/jquery-1.10.2.min.js', 'js/main.js']
+					'js/main.min.js' : ['js/jquery-1.11.1.min.js', 'js/main.js']
 				}
 			}
 		},
