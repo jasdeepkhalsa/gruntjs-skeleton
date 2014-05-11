@@ -1,3 +1,7 @@
 .project
 node_modules/
+bower_components/
+js/main.min.js
+js/main.min.map
+css/main.min.css
 .idea/

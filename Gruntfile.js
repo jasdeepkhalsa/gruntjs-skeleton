@@ -5,25 +5,30 @@ module.exports = function(grunt) {
 		jshint : {
 			files : ['Gruntfile.js', 'js/main.js'],
 			options : {
-				validthis : true,
-				laxcomma : true,
-				laxbreak : true,
-				browser : true,
-				eqnull : true,
-				debug : true,
-				devel : true,
-				boss : true,
-				expr : true,
-				asi : true,
+				jshintrc: '.jshintrc',
 				globals : {
 					jQuery : true
 				}
 			}
 		},
+	  connect: {
+	    test: {
+	      options: {
+	        port: 9000,
+	        base: '.'
+	      }
+	    },
+			server: {
+				options: {
+					port: 9001,
+					base: '.'
+				}
+			}
+	  },
 		qunit : {
 			all : {
 				options : {
-					urls : ['http://localhost/gruntjs-skeleton/tests/index.html']
+					urls : ['http://0.0.0.0:9000/tests/index.html']
 				}
 			}
 		},
@@ -38,7 +43,7 @@ module.exports = function(grunt) {
 					sourceMap: 'js/main.min.map'
 				},
 				files : {
-					'js/main.min.js' : ['js/jquery-1.11.1.min.js', 'js/main.js']
+					'js/main.min.js' : ['bower_components/jquery/dist/jquery.js', 'js/main.js']
 				}
 			}
 		},
@@ -53,10 +58,12 @@ module.exports = function(grunt) {
 
 	grunt.loadNpmTasks('grunt-contrib-jshint');
 	grunt.loadNpmTasks('grunt-contrib-qunit');
+	grunt.loadNpmTasks('grunt-contrib-connect');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-cssmin');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 
-	grunt.registerTask('test', ['jshint', 'qunit']);
+	grunt.registerTask('test', ['connect:test', 'jshint', 'qunit']);
 	grunt.registerTask('default', ['jshint', 'uglify', 'cssmin']);
+	grunt.registerTask('server', ['default', 'connect:server:keepalive']);
 };
