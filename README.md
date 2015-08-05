@@ -1,4 +1,4 @@
-# Grunt.js Skeleton #
+# Grunt.js Skeleton [![Build Status](https://travis-ci.org/jasdeepkhalsa/gruntjs-skeleton.svg)](https://travis-ci.org/jasdeepkhalsa/gruntjs-skeleton)
 
 Get up and running with Grunt fast with the **Grunt.js Skeleton**!
 
