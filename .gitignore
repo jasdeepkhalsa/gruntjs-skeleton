@@ -3,5 +3,6 @@ node_modules/
 bower_components/
 js/main.min.js
 js/main.min.map
+js/main.min.js.map
 css/main.min.css
 .idea/

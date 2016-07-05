@@ -5,7 +5,7 @@ Get up and running with Grunt fast with the **Grunt.js Skeleton**!
 Grunt.js is a fantastic tool to automate JavaScript linting, concatenation and minification of JavaScript and CSS files.
 
 This repository includes:
-* Grunt.js v0.4.x - http://gruntjs.com/
+* Grunt.js v1.x - http://gruntjs.com/
 * QUnit v1.x - http://qunitjs.com/
 * jQuery v1.x - http://jquery.com/
 
@@ -50,17 +50,19 @@ Now you can run grunt with the following command in the root of your application
 
 The result should be something like:
 
-	Running "jshint:files" (jshint) task
-	>> 2 files lint free.
+    Running "jshint:files" (jshint) task
+    >> 2 files lint free.
 
-	Running "uglify:my_target" (uglify) task
-	File js/main.min.map created (source map).
-	File js/main.min.js created: 95.85 kB → 96.57 kB
+    Running "uglify:my_target" (uglify) task
+    File js/main.min.js.map created (source map).
+    File js/main.min.js created: 293.5 kB → 100.76 kB
+    >> 1 sourcemap created.
+    >> 1 file created.
 
-	Running "cssmin:compress" (cssmin) task
-	File css/main.min.css created: 1.09 kB → 758 B
+    Running "cssmin:compress" (cssmin) task
+    >> 1 file created. 1.09 kB → 758 B
 
-	Done, without errors.
+    Done.
 
 For running a server, simply run:
 
@@ -75,16 +77,16 @@ For testing with `jshint` and `qunit` only, use:
 The result should be something like:
 
     Running "connect:test" (connect) task
-    Started connect web server on http://0.0.0.0:9000
+    Started connect web server on http://localhost:9000
 
     Running "jshint:files" (jshint) task
     >> 2 files lint free.
 
     Running "qunit:all" (qunit) task
     Testing http://0.0.0.0:9000/tests/index.html .OK
-    >> 1 assertions passed (186ms)
+    >> 1 assertions passed (22ms)
 
-    Done, without errors.
+    Done.
 
 Please note a few things:
 * `bower` is available at `./node_modules/.bin/bower`. Even if you have bower installed globally, you should use this local bower for your project. If you want to see what packages it's already installed use the command: `./node_modules/.bin/bower list --paths`.
@@ -95,6 +97,8 @@ Please note a few things:
 * Detailed information on upgrading from Grunt 0.3.x to Grunt 0.4.x is available here: http://gruntjs.com/upgrading-from-0.3-to-0.4
 
 ## Change logs ##
+* 0.1.0
+  * Upgraded Grunt.js and associated libraries to 1.x
 * 0.0.6
   * Now using `bower` for front-end package management, therefore the libraries in this repo should now upgrade automatically as new packages are released
   * Included a server so a user does not need to setup or download apache/xampp anymore. Just run `grunt server` and you should be good!
